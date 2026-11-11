@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Fonte mais moderna e legível */
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #121212; 
+    color: #f1f1f1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: #1e1e1e; 
+    width: 100%;
+    max-width: 800px;
+    /* Espaçamento interno aumentado para mais "respiro" */
+    padding: 50px; 
+    border-radius: 12px;
+    /* Sombra mais profunda para destacar o painel do fundo */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(212, 175, 55, 0.1); 
+    border-top: 5px solid #d4af37; 
+}
+
+h1, h2 {
+    color: #d4af37; 
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Letras ligeiramente mais espaçadas */
+    text-align: center;
+    border-bottom: 1px solid #333333; 
+    padding-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 25px; /* Mais espaço entre os campos */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #d4af37; 
+    font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    /* Campos ligeiramente mais altos */
+    padding: 14px 16px; 
+    background-color: #2a2a2a; 
+    color: #ffffff;
+    border: 1px solid #444444;
+    border-radius: 8px; /* Cantos um pouco mais arredondados */
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+input:focus {
+    border-color: #d4af37;
+    background-color: #333333; /* Fundo clareia levemente ao clicar */
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    color: #d4af37; 
+    background-color: #333333; 
+    border: 1px solid #d4af37; 
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.btn:hover { 
+    background-color: #444444; 
+    transform: translateY(-2px); /* Efeito de flutuação no botão */
+}
+
+.btn-red { 
+    background-color: #b30000; 
+    color: #ffffff;
+    border: none;
+}
+
+.btn-red:hover { 
+    background-color: #e60000; 
+    box-shadow: 0 4px 12px rgba(230, 0, 0, 0.4);
+}
+
+.btn-gray { 
+    background-color: #121212; 
+    color: #d4af37;
+    border: 1px solid #d4af37;
+}
+
+.btn-gray:hover { 
+    background-color: #d4af37; 
+    color: #121212;
+}
+
+.acoes {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden; /* Mantém os cantos arredondados na tabela */
+}
+
+th {
+    background-color: #b30000; 
+    color: #ffffff;
+    padding: 16px;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+td {
+    padding: 16px;
+    border-bottom: 1px solid #333333;
+    color: #e0e0e0; 
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+tr:nth-child(even) td { background-color: #252525; }
+tr:nth-child(odd) td { background-color: #1e1e1e; }
+tr:hover td { background-color: #2a2a2a; }
+
+.menu-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+}
+
+@media (min-width: 600px) {
+    .menu-list {
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+
+.menu-list a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #b30000; 
+    border: 1px solid #800000;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.05rem;
+    border-radius: 8px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.menu-list a:hover {
+    background-color: #e60000;
+    transform: translateY(-3px); /* Animação mais suave ao passar o rato */
+    box-shadow: 0 6px 15px rgba(230, 0, 0, 0.4);
+}
